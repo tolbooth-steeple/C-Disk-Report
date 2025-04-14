@@ -8,3 +8,4 @@ TODO:
 - Calculate % of space a file takes up in a folder
 - Get file sizes in subfolders
 - Get largest files in a given folder
+- Get very old files (more likely to be obsolete?)
