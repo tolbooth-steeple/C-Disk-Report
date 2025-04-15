@@ -17,6 +17,7 @@ int main() {
 long get_file_size(char *filename) {
   // open the given file in read mode
   FILE *fileptr = fopen(filename, "r");
+  fseek(fileptr, 0, SEEK_END);
 
   long size = ftell(fileptr);
 
