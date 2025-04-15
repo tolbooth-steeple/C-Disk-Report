@@ -9,3 +9,17 @@ int main() {
   long filesize = get_file_size(filename)
   printf("Size of '%s' is %ld", filename, filesize)
 }
+
+// naive solution to get file size
+// read till end of file, then return the number of bytes read
+// tutorials online demonstrate with fseek, ftell built-in functions
+long get_file_size(char *filename) {
+  // open the given file in read mode
+  FILE *fileptr = fopen(filename, "r");
+
+  long size = ftell(fileptr);
+
+  // close the file before returning
+  fclose(fileptr);
+  return size;
+}
